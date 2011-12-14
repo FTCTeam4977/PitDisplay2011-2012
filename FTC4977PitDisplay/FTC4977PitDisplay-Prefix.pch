@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'FTC4977PitDisplay' target in the 'FTC4977PitDisplay' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif

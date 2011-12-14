@@ -1,0 +1,296 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		49F1146A1498429E004DE11D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F114691498429E004DE11D /* Cocoa.framework */; };
+		49F114741498429E004DE11D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49F114721498429E004DE11D /* InfoPlist.strings */; };
+		49F114761498429E004DE11D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F114751498429E004DE11D /* main.m */; };
+		49F1147A1498429E004DE11D /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 49F114781498429E004DE11D /* Credits.rtf */; };
+		49F1147D1498429E004DE11D /* FTC4977PitDisplayAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F1147C1498429E004DE11D /* FTC4977PitDisplayAppDelegate.m */; };
+		49F114801498429E004DE11D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49F1147E1498429E004DE11D /* MainMenu.xib */; };
+		49F1148814984E26004DE11D /* ClockLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F1148714984E26004DE11D /* ClockLabel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		49F114651498429E004DE11D /* FTC4977PitDisplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTC4977PitDisplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49F114691498429E004DE11D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		49F1146C1498429E004DE11D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		49F1146D1498429E004DE11D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		49F1146E1498429E004DE11D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		49F114711498429E004DE11D /* FTC4977PitDisplay-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FTC4977PitDisplay-Info.plist"; sourceTree = "<group>"; };
+		49F114731498429E004DE11D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		49F114751498429E004DE11D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		49F114771498429E004DE11D /* FTC4977PitDisplay-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FTC4977PitDisplay-Prefix.pch"; sourceTree = "<group>"; };
+		49F114791498429E004DE11D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		49F1147B1498429E004DE11D /* FTC4977PitDisplayAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTC4977PitDisplayAppDelegate.h; sourceTree = "<group>"; };
+		49F1147C1498429E004DE11D /* FTC4977PitDisplayAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTC4977PitDisplayAppDelegate.m; sourceTree = "<group>"; };
+		49F1147F1498429E004DE11D /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		49F1148614984E26004DE11D /* ClockLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClockLabel.h; sourceTree = "<group>"; };
+		49F1148714984E26004DE11D /* ClockLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClockLabel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		49F114621498429E004DE11D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49F1146A1498429E004DE11D /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		49F1145A1498429E004DE11D = {
+			isa = PBXGroup;
+			children = (
+				49F1146F1498429E004DE11D /* FTC4977PitDisplay */,
+				49F114681498429E004DE11D /* Frameworks */,
+				49F114661498429E004DE11D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		49F114661498429E004DE11D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				49F114651498429E004DE11D /* FTC4977PitDisplay.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		49F114681498429E004DE11D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49F114691498429E004DE11D /* Cocoa.framework */,
+				49F1146B1498429E004DE11D /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		49F1146B1498429E004DE11D /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				49F1146C1498429E004DE11D /* AppKit.framework */,
+				49F1146D1498429E004DE11D /* CoreData.framework */,
+				49F1146E1498429E004DE11D /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		49F1146F1498429E004DE11D /* FTC4977PitDisplay */ = {
+			isa = PBXGroup;
+			children = (
+				49F1147B1498429E004DE11D /* FTC4977PitDisplayAppDelegate.h */,
+				49F1147C1498429E004DE11D /* FTC4977PitDisplayAppDelegate.m */,
+				49F1147E1498429E004DE11D /* MainMenu.xib */,
+				49F114701498429E004DE11D /* Supporting Files */,
+				49F1148614984E26004DE11D /* ClockLabel.h */,
+				49F1148714984E26004DE11D /* ClockLabel.m */,
+			);
+			path = FTC4977PitDisplay;
+			sourceTree = "<group>";
+		};
+		49F114701498429E004DE11D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				49F114711498429E004DE11D /* FTC4977PitDisplay-Info.plist */,
+				49F114721498429E004DE11D /* InfoPlist.strings */,
+				49F114751498429E004DE11D /* main.m */,
+				49F114771498429E004DE11D /* FTC4977PitDisplay-Prefix.pch */,
+				49F114781498429E004DE11D /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49F114641498429E004DE11D /* FTC4977PitDisplay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49F114831498429E004DE11D /* Build configuration list for PBXNativeTarget "FTC4977PitDisplay" */;
+			buildPhases = (
+				49F114611498429E004DE11D /* Sources */,
+				49F114621498429E004DE11D /* Frameworks */,
+				49F114631498429E004DE11D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FTC4977PitDisplay;
+			productName = FTC4977PitDisplay;
+			productReference = 49F114651498429E004DE11D /* FTC4977PitDisplay.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		49F1145C1498429E004DE11D /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 49F1145F1498429E004DE11D /* Build configuration list for PBXProject "FTC4977PitDisplay" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 49F1145A1498429E004DE11D;
+			productRefGroup = 49F114661498429E004DE11D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49F114641498429E004DE11D /* FTC4977PitDisplay */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		49F114631498429E004DE11D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49F114741498429E004DE11D /* InfoPlist.strings in Resources */,
+				49F1147A1498429E004DE11D /* Credits.rtf in Resources */,
+				49F114801498429E004DE11D /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		49F114611498429E004DE11D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49F114761498429E004DE11D /* main.m in Sources */,
+				49F1147D1498429E004DE11D /* FTC4977PitDisplayAppDelegate.m in Sources */,
+				49F1148814984E26004DE11D /* ClockLabel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		49F114721498429E004DE11D /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49F114731498429E004DE11D /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		49F114781498429E004DE11D /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49F114791498429E004DE11D /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		49F1147E1498429E004DE11D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49F1147F1498429E004DE11D /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		49F114811498429E004DE11D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		49F114821498429E004DE11D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		49F114841498429E004DE11D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FTC4977PitDisplay/FTC4977PitDisplay-Prefix.pch";
+				INFOPLIST_FILE = "FTC4977PitDisplay/FTC4977PitDisplay-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		49F114851498429E004DE11D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FTC4977PitDisplay/FTC4977PitDisplay-Prefix.pch";
+				INFOPLIST_FILE = "FTC4977PitDisplay/FTC4977PitDisplay-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		49F1145F1498429E004DE11D /* Build configuration list for PBXProject "FTC4977PitDisplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49F114811498429E004DE11D /* Debug */,
+				49F114821498429E004DE11D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49F114831498429E004DE11D /* Build configuration list for PBXNativeTarget "FTC4977PitDisplay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49F114841498429E004DE11D /* Debug */,
+				49F114851498429E004DE11D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 49F1145C1498429E004DE11D /* Project object */;
+}
