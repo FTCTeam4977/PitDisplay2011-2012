@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49199760149DA1D100286D03 /* team4977.png in Resources */ = {isa = PBXBuildFile; fileRef = 4919975F149DA1D100286D03 /* team4977.png */; };
 		49F1146A1498429E004DE11D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F114691498429E004DE11D /* Cocoa.framework */; };
 		49F114741498429E004DE11D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49F114721498429E004DE11D /* InfoPlist.strings */; };
 		49F114761498429E004DE11D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F114751498429E004DE11D /* main.m */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4919975F149DA1D100286D03 /* team4977.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = team4977.png; sourceTree = "<group>"; };
 		49F114651498429E004DE11D /* FTC4977PitDisplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTC4977PitDisplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49F114691498429E004DE11D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		49F1146C1498429E004DE11D /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -85,6 +87,7 @@
 		49F1146F1498429E004DE11D /* FTC4977PitDisplay */ = {
 			isa = PBXGroup;
 			children = (
+				4919975F149DA1D100286D03 /* team4977.png */,
 				49F1147B1498429E004DE11D /* FTC4977PitDisplayAppDelegate.h */,
 				49F1147C1498429E004DE11D /* FTC4977PitDisplayAppDelegate.m */,
 				49F1147E1498429E004DE11D /* MainMenu.xib */,
@@ -157,6 +160,7 @@
 				49F114741498429E004DE11D /* InfoPlist.strings in Resources */,
 				49F1147A1498429E004DE11D /* Credits.rtf in Resources */,
 				49F114801498429E004DE11D /* MainMenu.xib in Resources */,
+				49199760149DA1D100286D03 /* team4977.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +293,7 @@
 				49F114851498429E004DE11D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
