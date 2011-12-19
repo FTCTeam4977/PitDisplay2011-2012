@@ -14,7 +14,6 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    [[FTCMatches alloc]init];
 }
 
 @end

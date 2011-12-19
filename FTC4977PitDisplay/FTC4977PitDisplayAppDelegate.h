@@ -12,6 +12,8 @@
     NSWindow *window;
 }
 
++ (FTCMatches*) GetInstance
+
 @property (assign) IBOutlet NSWindow *window;
 
 @end

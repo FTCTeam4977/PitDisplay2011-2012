@@ -18,27 +18,49 @@
         NSString *fileData = [NSString stringWithContentsOfFile:@"/FTCMatches.txt"
                                                        encoding:NSUTF8StringEncoding
                                                           error:NULL];
-        NSScanner *parser = [NSScanner scannerWithString:fileData];
-        [parser setCharactersToBeSkipped:[NSCharacterSet characterSetWithCharactersInString:@"\n"]];
+        NSArray *lines = [fileData componentsSeparatedByString:@"\n"];
         
-       /* NSString *match;
-        NSString *time;
+        matches = [[NSMutableArray alloc] init];
         
-        NSString *b1;
-        NSString *b2;
-        
-        NSString *r1;
-        NSString *r2;*/
-        while ( ![parser isAtEnd] )
+        for ( NSString* _line in lines )
         {
-            NSString *data;
-            [parser scanUpToString:@"," intoString:&data];
-            NSLog(@"%@", data);
+            NSArray *line = [_line componentsSeparatedByString:@","];
+            if ( [line count] == 6)
+            {
+                NSMutableDictionary *match = [NSMutableDictionary dictionary];
+                [match setObject:[line objectAtIndex:0] forKey:@"Match"];
+                [match setObject:[line objectAtIndex:0] forKey:@"Time"];
+                
+                [match setObject:[line objectAtIndex:0] forKey:@"Red 1"];
+                [match setObject:[line objectAtIndex:0] forKey:@"Red 2"];
+                
+                [match setObject:[line objectAtIndex:0] forKey:@"Blue 1"];
+                [match setObject:[line objectAtIndex:0] forKey:@"Blue 2"];
+                
+                [matches addObject:match];
+            }
         }
-        
     }
     
     return self;
 }
 
++ (FTCMatches*) GetInstance
+{
+    static FTCMatches* instance = NULL;
+    
+    if ( instance == NULL )
+        instance = [[FTCMatches alloc] init];
+    return instance;
+}
+
+- (NSString*) queryMatch:(int)matchID forString:(NSString*)data
+{
+    return [[matches objectAtIndex:matchID] objectForKey:data];
+}
+
+- (int) matchCount
+{
+    return (int)[matches count];
+}
 @end

@@ -12,4 +12,5 @@
 {
     NSMutableArray *matches;
 }
++ (FTCMatches*) GetInstance;
 @end
