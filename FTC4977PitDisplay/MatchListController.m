@@ -14,10 +14,20 @@
 {
     self = [super init];
     if (self) {
-        data = [FTCMatches GetInstance];
     }
     
     return self;
+}
+
+-(int) numberOfRowsInTableView: (NSTableView*)table
+{
+    return [[FTCMatches GetInstance] matchCount];
+}
+
+-(id) tableView:(NSTableView*)table objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
+{
+    NSString* columnName = [[tableColumn headerCell] stringValue];
+    return [[FTCMatches GetInstance] queryMatch:row forString:columnName];
 }
 
 @end

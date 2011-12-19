@@ -10,7 +10,5 @@
 #import "FTCMatches.h"
 
 @interface MatchListController : NSObject
-{
-    FTCMatches *data;
-}
+
 @end

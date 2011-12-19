@@ -13,4 +13,6 @@
     NSMutableArray *matches;
 }
 + (FTCMatches*) GetInstance;
+- (NSString*) queryMatch:(int)matchID forString:(NSString*)data;
+- (int) matchCount;
 @end
