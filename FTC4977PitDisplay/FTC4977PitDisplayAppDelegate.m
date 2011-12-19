@@ -7,14 +7,14 @@
 //
 
 #import "FTC4977PitDisplayAppDelegate.h"
-
+#import "FTCMatches.h"
 @implementation FTC4977PitDisplayAppDelegate
 
 @synthesize window;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    
+    [[FTCMatches alloc]init];
 }
 
 @end
