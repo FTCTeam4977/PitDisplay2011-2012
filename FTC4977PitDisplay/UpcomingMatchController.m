@@ -35,6 +35,7 @@
             return @"Blue 2";
             
     }
+    return @"-";
 }
 
 
@@ -62,18 +63,18 @@
     
     if ( [columnName isEqualToString:@"Team"] )
     {
-        NSString *team = [[FTCMatches GetInstance] queryMatch:currentMatch forString:[self positionIDtoString:row]];
+        NSString *team = [[FTCMatches GetInstance] queryMatch:currentMatch forString:[self positionIDtoString:(int)row]];
         if ( [team isEqualToString:@"4977"] )
         {
             [nextMatchLarge setStringValue:[NSString stringWithFormat:@"Next match is match #%@ at %@", [[FTCMatches GetInstance] queryMatch:currentMatch forString:@"Match"], [[FTCMatches GetInstance] queryMatch:currentMatch forString:@"Time"]]];
-            [nextMatchStation setStringValue:[self positionIDtoString:row]];
+            [nextMatchStation setStringValue:[self positionIDtoString:(int)row]];
             
              [nextMatchSmall setStringValue:[NSString stringWithFormat:@"Match #%@", [[FTCMatches GetInstance] queryMatch:currentMatch forString:@"Match"]]];
         }
         return team;
     }
     else if ( [columnName isEqualToString:@"Position"] )
-        return [self positionIDtoString:row];
+        return [self positionIDtoString:(int)row];
     else return @"-";
 }
 
@@ -108,6 +109,17 @@
         currentMatch++;
     else isFinished = true;
     
+    [TableRefreshController Refresh];
+}
+
+-(IBAction)Back:(id)sender
+{
+    NSLog(@"CALLED");
+    if ( currentMatch <= 0 )
+        return;
+    currentMatch--;
+    isFinished = false;
+    [[FTCMatches GetInstance] setResult:@"" forMatch:currentMatch];
     [TableRefreshController Refresh];
 }
 

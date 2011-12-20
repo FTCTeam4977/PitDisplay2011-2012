@@ -27,7 +27,7 @@
 -(id) tableView:(NSTableView*)table objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
     NSString* columnName = [[tableColumn headerCell] stringValue];
-    return [[FTCMatches GetInstance] queryMatch:row forString:columnName];
+    return [[FTCMatches GetInstance] queryMatch:(int)row forString:columnName];
 }
 
 
