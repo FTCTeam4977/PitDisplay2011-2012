@@ -117,8 +117,11 @@
     NSLog(@"CALLED");
     if ( currentMatch <= 0 )
         return;
-    currentMatch--;
+    if ( !isFinished )
+        currentMatch--;
+    
     isFinished = false;
+    
     [[FTCMatches GetInstance] setResult:@"" forMatch:currentMatch];
     [TableRefreshController Refresh];
 }
