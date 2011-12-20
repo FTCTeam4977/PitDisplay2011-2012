@@ -29,13 +29,13 @@
             {
                 NSMutableDictionary *match = [NSMutableDictionary dictionary];
                 [match setObject:[line objectAtIndex:0] forKey:@"Match"];
-                [match setObject:[line objectAtIndex:0] forKey:@"Time"];
+                [match setObject:[line objectAtIndex:1] forKey:@"Time"];
                 
-                [match setObject:[line objectAtIndex:0] forKey:@"Red 1"];
-                [match setObject:[line objectAtIndex:0] forKey:@"Red 2"];
+                [match setObject:[line objectAtIndex:2] forKey:@"Red 1"];
+                [match setObject:[line objectAtIndex:3] forKey:@"Red 2"];
                 
-                [match setObject:[line objectAtIndex:0] forKey:@"Blue 1"];
-                [match setObject:[line objectAtIndex:0] forKey:@"Blue 2"];
+                [match setObject:[line objectAtIndex:4] forKey:@"Blue 1"];
+                [match setObject:[line objectAtIndex:5] forKey:@"Blue 2"];
                 
                 [matches addObject:match];
             }
@@ -63,4 +63,10 @@
 {
     return (int)[matches count];
 }
+
+-(void) setResult:(NSString*)result forMatch:(int)match
+{
+    [[matches objectAtIndex:match] setObject:result forKey:@"Result"];
+}
+
 @end

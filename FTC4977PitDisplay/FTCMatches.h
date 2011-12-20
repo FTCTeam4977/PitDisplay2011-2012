@@ -14,5 +14,6 @@
 }
 + (FTCMatches*) GetInstance;
 - (NSString*) queryMatch:(int)matchID forString:(NSString*)data;
+- (void) setResult:(NSString*)result forMatch:(int)match;
 - (int) matchCount;
 @end

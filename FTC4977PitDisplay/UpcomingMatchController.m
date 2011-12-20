@@ -15,6 +15,7 @@
     self = [super init];
     if (self) {
         currentMatch = 0;
+        isFinished = false;
     }
     
     return self;
@@ -44,12 +45,70 @@
 
 -(id) tableView:(NSTableView*)table objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
+    if ( isFinished )
+    {
+        [nextMatchLarge setStringValue:@"No remaining matches"];
+        [nextMatchSmall setStringValue:@"No remaining matches"];
+        [nextMatchStation setStringValue:@""];
+        
+        return @"";
+    }
+        
+    
     NSString* columnName = [[tableColumn headerCell] stringValue];
+    
+    
+    
+    
     if ( [columnName isEqualToString:@"Team"] )
-        return @"1";
+    {
+        NSString *team = [[FTCMatches GetInstance] queryMatch:currentMatch forString:[self positionIDtoString:row]];
+        if ( [team isEqualToString:@"4977"] )
+        {
+            [nextMatchLarge setStringValue:[NSString stringWithFormat:@"Next match is match #%@ at %@", [[FTCMatches GetInstance] queryMatch:currentMatch forString:@"Match"], [[FTCMatches GetInstance] queryMatch:currentMatch forString:@"Time"]]];
+            [nextMatchStation setStringValue:[self positionIDtoString:row]];
+            
+             [nextMatchSmall setStringValue:[NSString stringWithFormat:@"Match #%@", [[FTCMatches GetInstance] queryMatch:currentMatch forString:@"Match"]]];
+        }
+        return team;
+    }
     else if ( [columnName isEqualToString:@"Position"] )
         return [self positionIDtoString:row];
     else return @"-";
+}
+
+-(IBAction)Won:(id)sender
+{
+    
+    [[FTCMatches GetInstance] setResult:@"Won" forMatch:currentMatch];
+    
+    if ( currentMatch != [[FTCMatches GetInstance] matchCount]-1 )
+        currentMatch++;
+    else isFinished = true;
+    
+    [TableRefreshController Refresh];
+}
+
+-(IBAction)Lost:(id)sender
+{
+    [[FTCMatches GetInstance] setResult:@"Lost" forMatch:currentMatch];
+    
+    if ( currentMatch != [[FTCMatches GetInstance] matchCount]-1 )
+        currentMatch++;
+    else isFinished = true;
+    
+    [TableRefreshController Refresh];
+}
+
+-(IBAction)Tie:(id)sender
+{
+    [[FTCMatches GetInstance] setResult:@"Tie" forMatch:currentMatch];
+    
+    if ( currentMatch != [[FTCMatches GetInstance] matchCount]-1 )
+        currentMatch++;
+    else isFinished = true;
+    
+    [TableRefreshController Refresh];
 }
 
 @end

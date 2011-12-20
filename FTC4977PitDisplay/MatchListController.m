@@ -30,4 +30,5 @@
     return [[FTCMatches GetInstance] queryMatch:row forString:columnName];
 }
 
+
 @end

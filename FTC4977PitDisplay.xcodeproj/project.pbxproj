@@ -10,6 +10,7 @@
 		49199760149DA1D100286D03 /* team4977.png in Resources */ = {isa = PBXBuildFile; fileRef = 4919975F149DA1D100286D03 /* team4977.png */; };
 		49A8E8C1149E21CB0078BA94 /* FTCMatches.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A8E8C0149E21CB0078BA94 /* FTCMatches.m */; };
 		49AD1CBA149EE4FD00818737 /* UpcomingMatchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AD1CB9149EE4FD00818737 /* UpcomingMatchController.m */; };
+		49C334C314A031CD0032A57D /* TableRefreshController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C334C214A031CD0032A57D /* TableRefreshController.m */; };
 		49DB7E52149EBC1600EA967C /* MatchListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49DB7E51149EBC1600EA967C /* MatchListController.m */; };
 		49F1146A1498429E004DE11D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49F114691498429E004DE11D /* Cocoa.framework */; };
 		49F114741498429E004DE11D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 49F114721498429E004DE11D /* InfoPlist.strings */; };
@@ -26,6 +27,8 @@
 		49A8E8C0149E21CB0078BA94 /* FTCMatches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCMatches.m; sourceTree = "<group>"; };
 		49AD1CB8149EE4FD00818737 /* UpcomingMatchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpcomingMatchController.h; sourceTree = "<group>"; };
 		49AD1CB9149EE4FD00818737 /* UpcomingMatchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpcomingMatchController.m; sourceTree = "<group>"; };
+		49C334C114A031CD0032A57D /* TableRefreshController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableRefreshController.h; sourceTree = "<group>"; };
+		49C334C214A031CD0032A57D /* TableRefreshController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableRefreshController.m; sourceTree = "<group>"; };
 		49DB7E50149EBC1600EA967C /* MatchListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchListController.h; sourceTree = "<group>"; };
 		49DB7E51149EBC1600EA967C /* MatchListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchListController.m; sourceTree = "<group>"; };
 		49F114651498429E004DE11D /* FTC4977PitDisplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTC4977PitDisplay.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -109,6 +112,8 @@
 				49DB7E51149EBC1600EA967C /* MatchListController.m */,
 				49AD1CB8149EE4FD00818737 /* UpcomingMatchController.h */,
 				49AD1CB9149EE4FD00818737 /* UpcomingMatchController.m */,
+				49C334C114A031CD0032A57D /* TableRefreshController.h */,
+				49C334C214A031CD0032A57D /* TableRefreshController.m */,
 			);
 			path = FTC4977PitDisplay;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 				49A8E8C1149E21CB0078BA94 /* FTCMatches.m in Sources */,
 				49DB7E52149EBC1600EA967C /* MatchListController.m in Sources */,
 				49AD1CBA149EE4FD00818737 /* UpcomingMatchController.m in Sources */,
+				49C334C314A031CD0032A57D /* TableRefreshController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
