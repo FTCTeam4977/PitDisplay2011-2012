@@ -44,6 +44,19 @@
     return 4;
 }
 
+-(NSString*)getRankFromLordScout:(NSString*)team
+{
+    
+    NSURLRequest * urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://localhost:8000/LordScout/%@/api", team]]];
+    
+    NSURLResponse * response = nil;
+    NSError * error = nil;
+    NSData * data = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:&response error:&error];
+    if ( data == nil )
+        return @"-";
+    return [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+}
+
 -(id) tableView:(NSTableView*)table objectValueForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row
 {
     if ( isFinished )
@@ -75,8 +88,17 @@
     }
     else if ( [columnName isEqualToString:@"Position"] )
         return [self positionIDtoString:(int)row];
+    else if ( [columnName isEqualToString:@"Scouting Points"] )
+    {
+        NSString *team = [[FTCMatches GetInstance] queryMatch:currentMatch forString:[self positionIDtoString:(int)row]];
+        
+        return [self getRankFromLordScout:team];
+    }
+        
     else return @"-";
 }
+                
+
 
 -(IBAction)Won:(id)sender
 {
@@ -114,7 +136,6 @@
 
 -(IBAction)Back:(id)sender
 {
-    NSLog(@"CALLED");
     if ( currentMatch <= 0 )
         return;
     if ( !isFinished )

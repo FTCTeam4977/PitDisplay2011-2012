@@ -18,6 +18,7 @@
         self = [super init];
         if ( self )
             instance = self;
+        refreshTimer = [NSTimer scheduledTimerWithTimeInterval:20.0 target:self selector:@selector(refreshAll) userInfo:nil repeats:YES];
     }
     else
     {

@@ -14,7 +14,7 @@
 {
     self = [super init];
     if (self) {
-        timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateClock) userInfo:nil repeats:YES];;
+        timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(updateClock) userInfo:nil repeats:YES];
         
         date = [[NSDateFormatter alloc] init];
         [date setDateFormat:@"h:mm:ss a"];

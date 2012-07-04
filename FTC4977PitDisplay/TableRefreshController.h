@@ -12,6 +12,7 @@
 {
     IBOutlet NSTableView *full;
     IBOutlet NSTableView *next;
+    NSTimer *refreshTimer;
 }
 
 +(id)GetInstance;

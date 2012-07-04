@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		49199760149DA1D100286D03 /* team4977.png in Resources */ = {isa = PBXBuildFile; fileRef = 4919975F149DA1D100286D03 /* team4977.png */; };
+		495087B414DD52B000A152C7 /* NewLogo1.png in Resources */ = {isa = PBXBuildFile; fileRef = 495087B314DD52B000A152C7 /* NewLogo1.png */; };
 		49A8E8C1149E21CB0078BA94 /* FTCMatches.m in Sources */ = {isa = PBXBuildFile; fileRef = 49A8E8C0149E21CB0078BA94 /* FTCMatches.m */; };
 		49AD1CBA149EE4FD00818737 /* UpcomingMatchController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49AD1CB9149EE4FD00818737 /* UpcomingMatchController.m */; };
 		49C334C314A031CD0032A57D /* TableRefreshController.m in Sources */ = {isa = PBXBuildFile; fileRef = 49C334C214A031CD0032A57D /* TableRefreshController.m */; };
@@ -21,8 +22,21 @@
 		49F1148814984E26004DE11D /* ClockLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 49F1148714984E26004DE11D /* ClockLabel.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXBuildRule section */
+		495087B514DD53F700A152C7 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = sourcecode.c;
+			isEditable = 1;
+			outputFiles = (
+			);
+			script = "# <com.apple.compilers.gcc>\n";
+		};
+/* End PBXBuildRule section */
+
 /* Begin PBXFileReference section */
 		4919975F149DA1D100286D03 /* team4977.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = team4977.png; sourceTree = "<group>"; };
+		495087B314DD52B000A152C7 /* NewLogo1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewLogo1.png; sourceTree = "<group>"; };
 		49A8E8BF149E21CB0078BA94 /* FTCMatches.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTCMatches.h; sourceTree = "<group>"; };
 		49A8E8C0149E21CB0078BA94 /* FTCMatches.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTCMatches.m; sourceTree = "<group>"; };
 		49AD1CB8149EE4FD00818737 /* UpcomingMatchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpcomingMatchController.h; sourceTree = "<group>"; };
@@ -101,8 +115,8 @@
 			children = (
 				4919975F149DA1D100286D03 /* team4977.png */,
 				49F1147B1498429E004DE11D /* FTC4977PitDisplayAppDelegate.h */,
-				49F1147C1498429E004DE11D /* FTC4977PitDisplayAppDelegate.m */,
 				49F1147E1498429E004DE11D /* MainMenu.xib */,
+				49F1147C1498429E004DE11D /* FTC4977PitDisplayAppDelegate.m */,
 				49F114701498429E004DE11D /* Supporting Files */,
 				49F1148614984E26004DE11D /* ClockLabel.h */,
 				49F1148714984E26004DE11D /* ClockLabel.m */,
@@ -121,6 +135,7 @@
 		49F114701498429E004DE11D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				495087B314DD52B000A152C7 /* NewLogo1.png */,
 				49F114711498429E004DE11D /* FTC4977PitDisplay-Info.plist */,
 				49F114721498429E004DE11D /* InfoPlist.strings */,
 				49F114751498429E004DE11D /* main.m */,
@@ -142,6 +157,7 @@
 				49F114631498429E004DE11D /* Resources */,
 			);
 			buildRules = (
+				495087B514DD53F700A152C7 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -181,6 +197,7 @@
 				49F1147A1498429E004DE11D /* Credits.rtf in Resources */,
 				49F114801498429E004DE11D /* MainMenu.xib in Resources */,
 				49199760149DA1D100286D03 /* team4977.png in Resources */,
+				495087B414DD52B000A152C7 /* NewLogo1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,10 +296,13 @@
 		49F114841498429E004DE11D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FTC4977PitDisplay/FTC4977PitDisplay-Prefix.pch";
 				INFOPLIST_FILE = "FTC4977PitDisplay/FTC4977PitDisplay-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -290,10 +310,13 @@
 		49F114851498429E004DE11D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FTC4977PitDisplay/FTC4977PitDisplay-Prefix.pch";
 				INFOPLIST_FILE = "FTC4977PitDisplay/FTC4977PitDisplay-Info.plist";
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
